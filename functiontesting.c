@@ -20,7 +20,7 @@ int main()
     printf("~~Ceaser Cipher~~\n 0 = Encrypt\n 1 = Decrypt\n");
     printf("~~Subsitution Cipher~~\n 2 = Encrypt\n 3 = Decrypt\n");
     printf("Enter Choice For Processing: ");
-    scanf("%d\n", choice);
+    scanf("%d\n", &choice);
     
     
     
@@ -33,7 +33,7 @@ int main()
         printf("Enter String: ");
         scanf("%s\n", str);
         printf("Enter Key: ");
-        scanf("%d\n", key);
+        scanf("%d\n", &key);
         ccencrypt(str, key);
         break;
         }
@@ -43,7 +43,7 @@ int main()
         printf("Enter String: ");
         scanf("%s", str);
         printf("Enter Key: ");
-        scanf("%d", key);
+        scanf("%d", &key);
         ccdecrypt(str, key);
         break;
         }
@@ -70,7 +70,10 @@ int main()
         }
 
     default:
+    {
         printf("ERROR\n");
+    }
+
     }
     
     
